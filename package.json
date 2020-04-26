@@ -1,0 +1,32 @@
+{
+  "name": "SunWhys-Engine",
+  "version": "1.0.0",
+  "description": "SunWhys Engine is a collaborative game engine developed in C ++ supporting Lua, Javascript and having a graphic editor.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:build": "vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SunWhys/SunWhys-Docs.git"
+  },
+  "keywords": [
+    "documentation",
+    "video-game",
+    "engine",
+    "c++",
+    "lua",
+    "javascript"
+  ],
+  "author": "Rayan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SunWhys/SunWhys-Docs/issues"
+  },
+  "homepage": "https://github.com/SunWhys/SunWhys-Docs#readme",
+  "dependencies": {
+    "braces": "^3.0.2",
+    "vuepress": "^1.4.1"
+  }
+}
