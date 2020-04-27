@@ -495,3 +495,38 @@ ball:draw()
 ::: warning
 Please note, your images must be in the assets folder !
 :::
+
+## Documentation Physics
+
+::: tip
+Physics is an object which allows you different possibilities for your game
+:::
+
+**Constructor Method**
+
+```lua
+Physics:new()
+```
+
+*Example*
+
+```lua
+physics = Physics:new()
+```
+
+
+**Collide Method**
+
+```lua
+physics:collide(sprite1, sprite2)
+```
+
+The collide method makes it possible to check if a sprite does not collide with another sprite.
+
+*Example*
+
+```lua
+if (physics:collide(sprite1, sprite2)) then 
+	print("Collide !")
+end
+```
