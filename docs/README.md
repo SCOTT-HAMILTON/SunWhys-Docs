@@ -4,7 +4,7 @@
 </p>
 
 ## Description
-SunWhys Engine is a collaborative game engine developed in C ++ supporting Lua, Javascript and having a graphic editor.
+SunWhys Engine is a collaborative game engine developed in C ++ supporting Lua and having a graphic editor.
 
 To contribute, you can go to the [github page](https://github.com/SunWhys/SunWhysEngine) of the project. 
 

@@ -27,12 +27,13 @@ SunWhys
 The loader.tf file must contain all the .lua scripts executed by the engine knowing that they're read from top to bottom.
 
 ::: warning
-Warning, An init.lua and start.lua script are required, you must specify your game scripts between init.lua and start.lua.
+Warning, lang=<scriptingLanguage> is required and an init.lua and start.lua script are required, you must specify your game scripts between init.lua and start.lua. 
 :::
 
 Example : 
 
 ```tf
+lang=lua
 init.lua
 // game script
 start.lua
