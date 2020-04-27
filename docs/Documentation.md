@@ -3,14 +3,14 @@
   <img alt="introduction" height="100" src="https://cdn.discordapp.com/attachments/698261922700853273/703353528780980609/logo_idee_3_.png">
 </p>
 
-## Introduction to State and GameManager
+## Introduction to Scene and GameManager
 
 SunWhys Engine offers you a powerful game manager which will allow you to indicate your game scenes, and indicate on which scene to go :
 
 ```lua
-menu = State:new("Menu", -- Create State
+menu = Scenes:new("Menu", -- Create Scene
 function () -- Init function
-	ball = Behavior:new(window, "ball.png", 0, 0)
+	ball = Sprites:new(window, "ball.png", 0, 0)
 end,
 
 function () -- Render
@@ -22,7 +22,7 @@ function () -- Update
 end)
 
 
-gameManager:push(menu) -- Push State
+gameManager:push(menu) -- Push Scene
 gameManager:goToScene("Menu") -- go to "Menu Scene"
 ```
 
@@ -30,22 +30,22 @@ gameManager:goToScene("Menu") -- go to "Menu Scene"
 - The render method will allow you to display objects on the screen.
 - The Update method will allow you to update your scene 60 times per second.
 
-## Documentation State
+## Documentation Scene
 
 ::: tip
-We provide you with a State table to create your different state of play.
+We provide you with a Scene table to create your different state of play.
 :::
 
 **Constructor Declaration**
 
 ```lua
-State:new("NameOfScene", initFunc(), renderFunc(), UpdateFunc())
+Scenes:new("NameOfScene", initFunc(), renderFunc(), UpdateFunc())
 ```
 
 *Example*
 
 ```lua
-Menu = State:new("Menu", 
+Menu = Scenes:new("Menu", 
 function ()
 	
 end,
@@ -60,7 +60,7 @@ end)
 ## Documentation GameManager
 
 ::: tip
-We provide you with a table that allows you to navigate between your different game states.
+We provide you with a table that allows you to navigate between your different game scenes.
 :::
 
 **Constructor Declaration**
@@ -94,7 +94,7 @@ The render method is called in the basic example in the window loop in order to 
 **Push Method** 
 
 ```lua
-gameManager:push(state)
+gameManager:push(scene)
 ```
 
 The push method lets the game manager know which scenes to take into account.
@@ -108,7 +108,7 @@ gameManager:push(Menu)
 **GoToScene Method**
 
 ```lua
-gameManager:push(nameOfScene)
+gameManager:goToScene(nameOfScene)
 ```
 
 The goToScene method lets the gameManager use the init, render and update function of the scene of our choice.
@@ -163,8 +163,8 @@ while window:open() do
  		gameManager:update()
 	end
 
+    window:clear()
     gameManager:render()
-    window:clear(Color.Transparent)
 	window:display() 
 end
 ```
@@ -456,19 +456,19 @@ Color.Cyan
 Color.Transparent
 ```
 
-## Documentation Behavior
+## Documentation Sprites
 
 :::tip
-A behavior is an actor of your scene, SunWhysEngine provides you with an abstraction so you can easily create and manage them.
+A sprite is an actor of your scene, SunWhysEngine provides you with an abstraction so you can easily create and manage them.
 :::
 
 **Constructor Method**
 
 ```lua
-Behavior:new(window, "imageName.extension", x, y)
+Sprites:new(window, "imageName.extension", x, y)
 ```
 
-The Behavior builder simply takes : 
+The Sprites builder simply takes : 
 
 - the window object.
 - the name of your texture file with the extensions
@@ -476,16 +476,16 @@ The Behavior builder simply takes :
 - the y position.
 
 ```lua
-ball = Behavior:new(window, "ball.png", 0, 0)
+ball = Sprites:new(window, "ball.png", 0, 0)
 ```
 
 **Draw Method**
 
 ```lua
-behavior:draw()
+sprite:draw()
 ```
 
-The draw method displays a sprite (Behavior, etc.) on the window.
+The draw method displays a sprite on the window.
 
 *Example*
 ```lua
