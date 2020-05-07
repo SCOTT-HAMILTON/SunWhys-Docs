@@ -30,7 +30,7 @@ gameManager:goToScene("Menu") -- go to "Menu Scene"
 - The render method will allow you to display objects on the screen.
 - The Update method will allow you to update your scene 60 times per second.
 
-## Documentation Scene
+## Scene
 
 ::: tip
 We provide you with a Scene table to create your different state of play.
@@ -57,7 +57,7 @@ function ()
 end)
 ```
 
-## Documentation GameManager
+## GameManager
 
 ::: tip
 We provide you with a table that allows you to navigate between your different game scenes.
@@ -147,7 +147,7 @@ The videomode constructor allows you to define the size of your window.
 videoMode = VideoMode:new(1280, 720)
 ```
 
-## Documentation Window
+## Window
 
 ::: tip
 We provide you with a window table which allows you to create your game window.
@@ -329,7 +329,7 @@ EventType.KeyPressed
 EventType.KeyRelease
 ```
 
-## Documentation Keyboard
+## Keyboard
 
 ::: tip
 Keyboard is an enumeration of the different possible keys in game.
@@ -438,7 +438,7 @@ Keyboard.F15
 Keyboard.Pause
 ```
 
-## Documentation Color
+## Color
 
 ::: tip
 Color is an enumeration of the different colors available.
@@ -456,7 +456,7 @@ Color.Cyan
 Color.Transparent
 ```
 
-## Documentation Sprites
+## Sprites
 
 :::tip
 A sprite is an actor of your scene, SunWhysEngine provides you with an abstraction so you can easily create and manage them.
@@ -496,7 +496,7 @@ ball:draw()
 Please note, your images must be in the assets folder !
 :::
 
-## Documentation Physics
+## Physics
 
 ::: tip
 Physics is an object which allows you different possibilities for your game
