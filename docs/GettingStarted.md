@@ -45,7 +45,7 @@ SunWhys Engine is the engine itself, you can rename it to the name of your game.
 
 ### Scripts
 
-Scripts is a folder that contains all of your game's scripts.
+Scripts is a folder that contains all of your game scripts.
 
 Example : 
 
