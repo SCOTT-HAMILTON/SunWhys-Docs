@@ -163,8 +163,8 @@ while window:open() do
  		gameManager:update()
 	end
 
-    window:clear()
-    gameManager:render()
+  window:clear(Color.Black)
+  gameManager:render()
 	window:display() 
 end
 ```
@@ -249,7 +249,7 @@ while window:open() do
 	while window:event(event) do
 	end
 
-	window:clear(Color.Transparent)
+	window:clear(Color.Black)
 	window:display()
 end
 ```
@@ -272,7 +272,7 @@ while window:open() do
 		end
 	end
 
-	window:clear(Color.Transparent)
+	window:clear(Color.Black)
 	window:display()
 end
 ```

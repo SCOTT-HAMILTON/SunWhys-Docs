@@ -66,7 +66,7 @@ function initialization()
  		    gameManager:update()
 	    end
 
-        window:clear()
+        window:clear(Color.Black)
         gameManager:render()
   	    window:display()
     end
